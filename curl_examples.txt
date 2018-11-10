@@ -1,0 +1,6 @@
+//POST
+curl -i -H "Content-Type:application/json" -X POST localhost:8080/userProfile -d '{"firstName":"Ole Lykke","lastName":"Jacobsen","mobile":"+45 31 37 06 65","email":"olj@nine.dk","userName":"ole","password":"ole"}'
+curl -i -H "Content-Type:application/json" -X POST localhost:8080/userProfile -d '{firstName":"Magnus Lykke","lastName":"Jacobsen","mobile":"n/a","email":"n/a","userName":"magnus","password":"magnus"}'
+
+//GET
+curl -i localhost:8080/userProfile

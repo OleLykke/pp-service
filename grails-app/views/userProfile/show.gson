@@ -1,0 +1,7 @@
+import shareparking.UserProfile
+
+model {
+	UserProfile userProfile
+}
+
+json tmpl.userProfile(userProfile)

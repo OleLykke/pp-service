@@ -1,0 +1,16 @@
+import shareparking.UserProfile
+
+model {
+	UserProfile userProfile
+}
+
+Currency currency = locale?.country ? Currency.getInstance(locale) : Currency.getInstance('USD')
+json {
+    id userProfile.id
+    firstName userProfile.firstName
+    lastName userProfile.lastName
+    mobile userProfile.mobile
+    email userProfile.email
+    userName userProfile.userName
+    password userProfile.password
+}
