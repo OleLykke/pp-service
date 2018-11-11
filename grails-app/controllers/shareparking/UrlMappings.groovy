@@ -10,6 +10,7 @@ class UrlMappings {
             }
         }
         */
+        post "/parkingSpaceOwner/addParkingSpace?"(action: 'addParkingSpace')
 
         delete "/$controller/$id(.$format)?"(action: 'delete')
         get "/$controller(.$format)?"(action: 'index')
@@ -18,9 +19,16 @@ class UrlMappings {
         put "/$controller/$id(.$format)?"(action: 'update')
         patch "/$controller/$id(.$format)?"(action: 'patch')
 
+
         '/userProfile'(resources: 'userProfile') {
             collection {
                 '/search'(controller: 'userProfile', action: 'search')
+            }
+        }
+
+        '/parkingSpaceOwner'(resources: 'parkingSpaceOwner') {
+            collection {
+                '/addParkingSpace'(controller: 'parkingSpaceOwner', action: 'addParkingSpace')
             }
         }
 
@@ -29,7 +37,7 @@ class UrlMappings {
         "500"(view:'/error')
         "404"(view:'/notFound')
         */
-        '/'(controller: 'UserProfile', action: 'index')
+        //'/'(controller: 'UserProfile', action: 'index')
         '500'(view: '/error')
         '404'(view: '/notFound')
     }

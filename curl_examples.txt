@@ -23,3 +23,5 @@ curl -i -H "Content-Type:application/json" -X POST localhost:8080/parkingSpaceOw
 //GET
 curl -i localhost:8080/parkingSpaceOwner
 
+// Add parking space
+curl -i -H "Content-Type:application/json" -X POST localhost:8080/parkingSpaceOwner/addParkingSpace -d '{"ownerId":"1", latitude:1.123456, longtitude:1.123456}'

@@ -27,4 +27,17 @@ class ParkingSpaceOwnerControllerSpec extends Specification implements Controlle
         then: 'Then the should be one parking space associated to the owner'
         controller.getParkingSpaces(parkingSpaceOwner).size() == 1
     }
+
+    void "test 2 it is possible to add a parking space to an existing owner"() {
+        given:
+        ParkingSpaceOwner parkingSpaceOwner = new ParkingSpaceOwner(id: '', userId: '1')
+        parkingSpaceOwner.save()
+
+        when: 'A parking space is added to the owner'
+        controller.addParkingSpace(parkingSpaceOwner.getId(), 1.123456, 1.123456,0)
+
+        then: 'Then the should be one parking space associated to the owner'
+        controller.getParkingSpaces(parkingSpaceOwner).size() == 1
+    }
+
 }
