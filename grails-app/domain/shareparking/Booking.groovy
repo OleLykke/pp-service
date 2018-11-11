@@ -18,6 +18,8 @@ class Booking {
         version false
         parkingSpaceId column:'parking_space_id'
         driverId column:'driver_id'
+        driverId indexColumn: [name: 'the_driver', type: Integer]
+        parkingSpaceId indexColumn: [name: 'the_parking_space', type: Integer]
     }
 
     static constraints = {

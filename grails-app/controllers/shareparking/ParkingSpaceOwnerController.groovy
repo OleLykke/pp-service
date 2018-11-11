@@ -9,4 +9,11 @@ class ParkingSpaceOwnerController extends RestfulController {
         super(ParkingSpaceOwner)
     }
 
+    void addParkingSpace(ParkingSpaceOwner parkingSpaceOwner, ParkingSpace parkingSpace) {
+        parkingSpaceOwner.addToParkingspaces(parkingSpace)
+    }
+
+    Set<ParkingSpace> getParkingSpaces(ParkingSpaceOwner parkingSpaceOwner) {
+        return parkingSpaceOwner.parkingspaces
+    }
 }

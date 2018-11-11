@@ -16,6 +16,8 @@ class ParkingSpace {
         id generator: 'identity'
         version false
         parkingSpaceOwnerId column:'parking_space_owner_id'
+        latitude indexColumn: [name: 'the_latitude', type: Double]
+        longitude indexColumn: [name: 'the_longitude', type: Double]
     }
 
     static constraints = {

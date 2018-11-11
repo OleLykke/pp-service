@@ -16,6 +16,7 @@ class Driver {
         id generator: 'identity'
         version false
         userId column:'user_id'
+        userId indexColumn: [name: 'the_driver', type: Integer]
     }
 
 

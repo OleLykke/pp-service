@@ -4,10 +4,6 @@ import grails.compiler.GrailsCompileStatic
 
 @GrailsCompileStatic
 class UserProfile {
-    static mapping = {
-        table "user_profile"
-    }
-
     //static belongsTo = [parkingspaceowner: ParkingSpaceOwner, driver: Driver]
 
     Integer id
@@ -17,6 +13,12 @@ class UserProfile {
     String email
     String userName
     String password
+
+    static mapping = {
+        table "user_profile"
+        firstName indexColumn: [name: 'the_first_name', type: String]
+        lastName indexColumn: [name: 'the_last_name', type: String]
+    }
 
     static constraints = {
         id nullable:true
