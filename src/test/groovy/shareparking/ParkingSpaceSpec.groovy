@@ -14,6 +14,7 @@ class ParkingSpaceSpec extends HibernateSpec { //implements DomainUnitTest<Parki
     def cleanup() {
     }
 
+    @Ignore
     void "test valid data"() {
         when: 'A valid parkingspace record is created'
         ParkingSpace parkingSpace = new ParkingSpace(id: '', parkingSpaceOwnerId: '1', latitude: 1.123456, longitude: 1.123456, rating: 0)

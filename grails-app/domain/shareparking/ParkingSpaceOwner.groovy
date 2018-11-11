@@ -9,6 +9,7 @@ class ParkingSpaceOwner {
 
     static mapping = {
         table 'parking_space_owner'
+        parkingspaces cascade: 'all-delete-orphan'
         id generator: 'identity'
         version false
         userId column:'user_id'

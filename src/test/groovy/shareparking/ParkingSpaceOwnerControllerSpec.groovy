@@ -15,4 +15,6 @@ class ParkingSpaceOwnerControllerSpec extends Specification implements Controlle
         expect:"fix me"
             true == true
     }
+
+    
 }
