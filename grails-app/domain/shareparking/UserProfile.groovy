@@ -8,6 +8,8 @@ class UserProfile {
         table "user_profile"
     }
 
+    //static belongsTo = [parkingspaceowner: ParkingSpaceOwner, driver: Driver]
+
     Integer id
     String firstName
     String lastName

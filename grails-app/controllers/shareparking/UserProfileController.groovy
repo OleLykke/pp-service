@@ -4,7 +4,7 @@ import grails.rest.RestfulController
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class UserProfileController extends RestfulController{
+class UserProfileController extends RestfulController {
     static responseFormats = ['json', 'xml']
 
     UserProfileController() {

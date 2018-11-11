@@ -89,18 +89,24 @@ hibernate:
         use_second_level_cache: false
         use_query_cache: false
 dataSource:
+    #pooled: true
+    #jmxExport: true
+    #driverClassName: 'org.postgresql.Driver'
+    #dialect: 'org.hibernate.dialect.PostgreSQLDialect'
+    #username: 'privateparking'
+    #password: 'privateparking'
     pooled: true
     jmxExport: true
-    driverClassName: 'org.postgresql.Driver'
-    dialect: 'org.hibernate.dialect.PostgreSQLDialect'
-    username: 'privateparking'
-    password: 'privateparking'
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
 
 environments:
     development:
         dataSource:
-            dbCreate: create
-            url: jdbc:postgresql://localhost:5432/privateparking2
+            dbCreate: create-drop
+            #url: jdbc:postgresql://localhost:5432/privateparking3
+            url: jdbc:h2:mem:devtDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
     test:
         dataSource:
             dbCreate: update

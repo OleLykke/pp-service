@@ -16,7 +16,7 @@ class ParkingSpaceOwnerSpec extends HibernateSpec { //implements DomainUnitTest<
 
     void "test valid data"() {
         when: 'A valid parkingSpace record is created'
-        ParkingSpaceOwner parkingSpaceOwner = new ParkingSpaceOwner(id: '', user_id: '1')
+        ParkingSpaceOwner parkingSpaceOwner = new ParkingSpaceOwner(id: '', userId: '1')
         parkingSpaceOwner.save()
 
         then: 'There are no errors and the data are saved'
@@ -25,12 +25,12 @@ class ParkingSpaceOwnerSpec extends HibernateSpec { //implements DomainUnitTest<
 
     void "test constraints violations"() {
         when: 'An invalid parkingSpace record is attempted'
-        ParkingSpaceOwner parkingSpaceOwner = new ParkingSpaceOwner(id: '', user_id: '')
+        ParkingSpaceOwner parkingSpaceOwner = new ParkingSpaceOwner(id: '', userId: '')
         parkingSpaceOwner.save()
 
         then: 'There are no errors and the data are saved'
         parkingSpaceOwner.hasErrors()
-        parkingSpaceOwner.errors.getFieldError('user_id')
+        parkingSpaceOwner.errors.getFieldError('userId')
         ParkingSpaceOwner.count() == 0
     }
 }

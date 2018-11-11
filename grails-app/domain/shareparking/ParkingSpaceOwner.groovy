@@ -2,11 +2,21 @@ package shareparking
 
 class ParkingSpaceOwner {
 
+    static hasMany = [parkingspaces: ParkingSpace]
+
     Integer id
-    Integer user_id
+    Integer userId
+
+    static mapping = {
+        table 'parking_space_owner'
+        id generator: 'identity'
+        version false
+        userId column:'user_id'
+    }
+
 
     static constraints = {
         id nullable: true
-        user_id nullable: false
+        userId nullable: false
     }
 }
