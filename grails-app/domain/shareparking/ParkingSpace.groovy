@@ -3,7 +3,9 @@ package shareparking
 class ParkingSpace {
 
     //static hasMany = [bookings: Booking]
-    static belongsTo = [parkingspaceowner: ParkingSpaceOwner]
+
+    //Nedenstående giver mulighed for at finde en parkeringsplads' ejer
+    //static belongsTo = [parkingspaceowner: ParkingSpaceOwner]
 
     Integer id
     Integer parkingSpaceOwnerId

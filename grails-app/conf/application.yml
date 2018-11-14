@@ -109,7 +109,7 @@ environments:
             username: 'privateparking'
             password: 'privateparking'
 
-            dbCreate: create-drop
+            dbCreate: update
             url: jdbc:postgresql://localhost:5432/privateparking-dev
             #url: jdbc:h2:mem:devtDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
     test:

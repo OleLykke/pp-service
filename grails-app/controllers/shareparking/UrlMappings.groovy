@@ -10,7 +10,6 @@ class UrlMappings {
             }
         }
         */
-        post "/parkingSpaceOwner/addParkingSpace?"(action: 'addParkingSpace')
 
         delete "/$controller/$id(.$format)?"(action: 'delete')
         get "/$controller(.$format)?"(action: 'index')
@@ -23,12 +22,6 @@ class UrlMappings {
         '/userProfile'(resources: 'userProfile') {
             collection {
                 '/search'(controller: 'userProfile', action: 'search')
-            }
-        }
-
-        '/parkingSpaceOwner'(resources: 'parkingSpaceOwner') {
-            collection {
-                '/addParkingSpace'(controller: 'parkingSpaceOwner', action: 'addParkingSpace')
             }
         }
 
